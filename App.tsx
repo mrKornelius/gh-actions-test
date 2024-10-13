@@ -4,16 +4,16 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   const [toggle, setToggle] = useState(false);
-  let x = 0;
+
   useEffect(() => {
     if (toggle) {
-      x = 2;
+      setToggle(false);
     }
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>{x}</Text>
+      <Text>{toggle}</Text>
       <StatusBar style="auto" />
     </View>
   );
